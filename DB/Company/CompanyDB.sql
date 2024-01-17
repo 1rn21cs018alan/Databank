@@ -7,7 +7,7 @@ create table Employee(
 	name varchar(40) not null,
 	addr varchar(200),
 	dob date,
-	sex varchar(1) default 'M',
+	sex varchar(1),
 	salary float,
 	superssn int,
 	dno int,
