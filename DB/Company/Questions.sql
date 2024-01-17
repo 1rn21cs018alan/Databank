@@ -14,3 +14,13 @@ where not exists(
 
 ______________________________________________
 
+//Select Projects that involve Employees named Scott who either work on that project or managers it
+
+select Distinct(pno)
+from Project P,Department D, Employee E
+where P.dno=D.dno and D.mgrssn=E.SSn and E.name="Scott"
+union
+select Distinct (W.pno) 
+from Project P, Works_on W, Employee E
+where P.pno=W.pno and E.SSn=W.SSn and E.name="Scott"
+;
