@@ -1,7 +1,7 @@
 // Creation Commands
 
-create database Company_1;
-use Company_1;
+create database Company_018;
+use Company_018;
 create table Employee(
 	ssn int ,
 	name varchar(40) not null,
@@ -20,17 +20,17 @@ create table Department(
 	mgrssn int,
 	mgrstartdate date,
 	constraint pk2 primary key(dno),
-	constraint fk1 foreign key(mgrssn) references Employee(ssn)
+	constraint fk1 foreign key(mgrssn) references Employee(ssn) on delete set NULL
 );
 
-alter table Employee add constraint fk2 foreign key(dno) references Department(dno);
-alter table Employee add constraint fk3 foreign key(superssn) references Employee(ssn);
+alter table Employee add constraint fk2 foreign key(dno) references Department(dno) on delete set NULL;
+alter table Employee add constraint fk3 foreign key(superssn) references Employee(ssn) on delete set NULL;
 
 create table Dlocation(
 	dno int,
 	loc varchar(200),
 	constraint pk3 primary key(dno,loc),
-	constraint fk4 foreign key(dno) references Department(dno)
+	constraint fk4 foreign key(dno) references Department(dno)  on delete cascade
 );
 
 create table Project(
@@ -39,7 +39,7 @@ create table Project(
 	ploc varchar(200),
 	dno int,
 	constraint pk4 primary key(pno),
-	constraint fk5 foreign key(dno) references Department(dno)
+	constraint fk5 foreign key(dno) references Department(dno) on delete set NULL
 );
 
 create table Works_on(
@@ -47,6 +47,6 @@ create table Works_on(
 	pno int,
 	hours int,
 	constraint pk5 primary key(ssn,pno),
-	constraint fk6 foreign key(pno) references Project(pno),
-	constraint fk7 foreign key(ssn) references Employee(ssn)
+	constraint fk6 foreign key(pno) references Project(pno)  on delete cascade,
+	constraint fk7 foreign key(ssn) references Employee(ssn)  on delete cascade
 );
