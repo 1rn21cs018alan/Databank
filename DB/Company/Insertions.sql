@@ -20,4 +20,19 @@ insert into Department(dno,dname) values
 ;
 
 insert into Employee(ssn ,	name ,	dno ) values
-	(1003,"Deepak",5);
+	(1003,"Ganesha",5),
+	(1004,"Manish",5),
+	(1005,"Deepak",5),
+	(1006,"Rahul",5),
+	(1007,"Surendra",6),
+	(1008,"Suraj",6),
+	(1009,"Mohandas",6),
+	(1010,"Harsha",2),
+	(1011,"Scott",3),
+	(1012,"Pampers",4),
+	(1013,"Scott",3),
+	(1014,"Scott",3),
+	(1015,"Scott",3),
+	(1016,"Scott",Null),
+	(1017,"Scott",Null)
+;
