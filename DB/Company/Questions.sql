@@ -32,3 +32,17 @@ ____________________________________________________
 Select E.name,E.salary * 1.1 as increased_sal
 from Employee E, Project P, Works_on W
 where E.SSn=W.SSn and P.pno=W.pno and P.pname="IOT";
+
+
+____________________________________________________
+// for each dept that has more than 5 employees , retrieve Dno, no of employees who make more than 60000
+
+select D.Dno ,Count(*)
+from Employee E,Department D
+where D.dno=E.dno and E.salary>6000 and E.dno in (
+	select E.dno
+	from Employee E
+	group by E.dno
+	having count(*)>5
+)
+group by dno;
