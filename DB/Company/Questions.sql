@@ -24,3 +24,11 @@ select Distinct (W.pno)
 from Project P, Works_on W, Employee E
 where P.pno=W.pno and E.SSn=W.SSn and E.name="Scott"
 ;
+
+____________________________________________________
+
+//Show the resulting salaries if every employee working on 'IOT' project is given 10% hike
+
+Select E.name,E.salary * 1.1 as increased_sal
+from Employee E, Project P, Works_on W
+where E.SSn=W.SSn and P.pno=W.pno and P.pname="IOT";
