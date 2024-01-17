@@ -46,3 +46,11 @@ where D.dno=E.dno and E.salary>6000 and E.dno in (
 	having count(*)>5
 )
 group by dno;
+
+
+____________________________________________________
+//find sum of salaries of all employees of Accounting Department as well as maximum salary and minimum salary from this Department
+
+Select sum(salary),min(salary),max(salary)
+from Employee E,Department D
+where E.dno=D.dno and D.dname="Accounting";
