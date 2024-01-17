@@ -52,6 +52,7 @@ insert into Project(pno,pname,dno) values
 
 insert into Works_on(ssn,pno,hours) values
 insert into Works_on(ssn,pno,hours) values
+insert into Works_on(ssn,pno,hours) values
 	(1003,5601,12),
 	(1004,5601,12),
 	(1005,5602,12),
@@ -61,11 +62,10 @@ insert into Works_on(ssn,pno,hours) values
 	(1009,5606,12),
 	(1010,5607,12),
 	(1011,5608,12),
-	(1012,5609,12),
-	(1011,5601,12),
-	(1011,5602,12),
-	(1011,5605,12),
-	(1011,5609,12),,
+	(1012,5601,12),
+	(1012,5602,12),
+	(1012,5605,12),
+	(1012,5609,12), 
 	(1013,5610,12),
 	(1013,5601,12),
 	(1013,5602,12),
@@ -76,7 +76,4 @@ insert into Works_on(ssn,pno,hours) values
 	(1014,5605,12),
 	(1014,5609,12)
 ;
-
-;
-
 
