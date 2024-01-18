@@ -18,8 +18,8 @@ public class Bell{
 		for (int i = 0; i< n; i++,System.out.println())
 		for (int j = 0; j < n; j++) 
 		System.out.print(adj[i][j]+",");
-//		System.out.println("Enter source vertex"); 
-//		src = sc.nextInt();
+		System.out.println("Enter source vertex"); 
+		src = sc.nextInt()-1;
 //		System.out.println("Enter destination vertex"); 
 //		dest = sc.nextInt();
 		dist = new int[n]; 
@@ -27,7 +27,7 @@ public class Bell{
 		dist[i] = 999; 
 		dist[src] = 0;
 		calc();
-		System.out.println("Distance Vector from Node 1");
+		System.out.println("Distance Vector from Node "+(src+1)+" to other nodes:");
 		for (int i = 0; i< n; i++) 
 			System.out.println("Distance to " + (i + 1) + " is " + dist[i]);
 		
