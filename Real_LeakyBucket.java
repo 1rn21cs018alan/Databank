@@ -1,3 +1,5 @@
+// This is not Lab program, it's more advanced.
+//implement the other leaky bucket for record
 package lab;
 import java.util.*;
 public class Real_LeakyBucket extends Thread{
