@@ -28,7 +28,7 @@ create table Book(
 create table Book_Authors(
 	Book_ID int,
 	Author varchar(100),
-	constraint fk2 foreign key(Book_ID) references Book(ID),
+	constraint fk2 foreign key(Book_ID) references Book(ID) on delete cascade,
 	constraint pk4 primary key(Book_ID,Author)
 );
 
@@ -43,7 +43,7 @@ create table Book_lending(
 	Card_no int,
 	date_out date,
 	due_date date,
-	constraint fk3 foreign key(Book_ID) references Book(ID),
+	constraint fk3 foreign key(Book_ID) references Book(ID) on delete cascade,
 	constraint fk4 foreign key(Branch_ID) references Library_branch(ID),
 	constraint fk5 foreign key(Card_no) references Card(card_no)	
 );
@@ -52,7 +52,10 @@ create table Book_copies(
 	Book_ID int,
 	Branch_ID int,
 	Copies int,
-	constraint fk6 foreign key(Book_ID) references Book(ID),
+	constraint fk6 foreign key(Book_ID) references Book(ID) on delete cascade,
 	constraint fk7 foreign key(Branch_ID) references Library_branch(ID),
 	constraint pk6 primary key(Book_ID,Branch_ID)
 );
+
+
+
