@@ -1,4 +1,4 @@
-//some insert statements
+#some insert statements
 
 insert into Employee(ssn ,	name ,	addr,	dob ,	sex ,salary ) values
 	(1002,"bathel","BNMIT","2003-01-29","F",40000.00);
