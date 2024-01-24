@@ -19,7 +19,7 @@ create table Publisher(
 create table Book(
 	ID int,
 	title varchar(100),
-	year date,
+	year int,
 	pub varchar(100),
 	constraint pk1 primary key(ID),
 	constraint fk1 foreign key(pub) references Publisher(name)
@@ -56,6 +56,3 @@ create table Book_copies(
 	constraint fk7 foreign key(Branch_ID) references Library_branch(ID),
 	constraint pk6 primary key(Book_ID,Branch_ID)
 );
-
-
-
