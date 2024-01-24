@@ -1,4 +1,4 @@
-// Creation Commands
+# Creation Commands
 
 create database Company_018;
 use Company_018;
