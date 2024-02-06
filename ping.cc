@@ -20,8 +20,7 @@ static void PingRtt (std::string context, Time rtt)
   std::cout << context << " " << rtt << std::endl;
 }
 
-int
-main (int argc, char *argv[])
+int main (int argc, char *argv[])
 {
 
   CommandLine cmd;
