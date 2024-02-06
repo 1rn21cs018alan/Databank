@@ -1,16 +1,8 @@
-// Network topology
-//
-//       n0    n1   n2   n3
-//       |     |    |    |
-//     =====================
-//
-//  node n0,n1,n3 pings to node n2
-//  node n0 generates protocol 2 (IGMP) to node n3
 
-//#include <iostream>
-//#include <fstream>
-//#include <string>
-//#include <cassert>
+#include <iostream>
+#include <fstream>
+#include <string>
+#include <cassert>
 
 #include "ns3/core-module.h"
 #include "ns3/network-module.h"
