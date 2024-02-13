@@ -7,7 +7,7 @@ Select ID, title,author,pub,copies
 from Book B, Book_Authors A, Book_copies C
 where ID=A.Book_ID and ID=C.Book_ID;
 
-#get Particulars of Borrowers who have borrowed more than 3 books from jan 2014 to jan 2017
+#get Particulars of Borrowers who have borrowed more than 3 books from jan 2017 to jun 2017
 Select card_no
 from Book_lending
 where date_out between '2017-01-01' and '2017-06-30'
