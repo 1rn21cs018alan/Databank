@@ -16,6 +16,16 @@ where M1.Mid=M2.Mid and M2.Aid in(
 	having count(M3.Aid)>1
 );
 
+
 #3. Find the title of movies and number of stars for each movie that has 
 #	at least one rating and find the highest number of stars that movie received. 
 #	Sort the result by movie title.
+
+
+select title,star
+from Movie M,Rating R
+where M.Mid=R.Mid and R.star in(
+	select max(R1.star)
+	from Rating R1
+	where M.Mid=R1.Mid
+);
