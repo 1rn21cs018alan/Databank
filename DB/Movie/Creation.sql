@@ -1,3 +1,5 @@
+DROP database IF EXISTS Movie_018;
+
 create database Movie_018;
 use Movie_018;
 
