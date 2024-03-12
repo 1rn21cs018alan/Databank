@@ -1,3 +1,4 @@
+DROP database IF EXISTS library_21cs018;
 
 create database library_21cs018;
 use library_21cs018;
