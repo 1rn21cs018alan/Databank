@@ -1,4 +1,5 @@
 # Creation Commands
+DROP database IF EXISTS Company_018;
 
 create database Company_018;
 use Company_018;
