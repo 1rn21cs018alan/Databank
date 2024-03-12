@@ -1,3 +1,4 @@
+DROP database IF EXISTS order_018;
 
 create database order_018;
 use order_018;
