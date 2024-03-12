@@ -29,3 +29,18 @@ where M.Mid=R.Mid and R.star in(
 	from Rating R1
 	where M.Mid=R1.Mid
 );
+
+#4. List all actors who acted in a movie before 2000 
+#   and also in a movie after 2015 (use JOIN operation).
+
+Select Distinct(Aname) from 
+(actor A natural join (movie_cast M1 natural join movie M2 ))
+where year<2000 or year>2015; 
+
+#5. Update rating of all movies directed by ‘Steven Spielberg’ to 5.
+
+update rating set star=5 
+where Mid in 
+	(select M.Mid 
+    from movie M,director D 
+    where M.Did=D.Did and D.Dname="Steven Spielberg");
