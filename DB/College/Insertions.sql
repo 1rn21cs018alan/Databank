@@ -18,3 +18,17 @@ insert into class values
 	("1rn20cs002",2),
 	("1rn20cs003",3),
 	("1rn20cs004",4);
+
+insert into subject values
+	(1,"Math",4,4),
+	(2,"DSA",4,4),
+	(3,"Java",8,4);
+
+insert into IAmarks values
+	("1rn21cs018",1,1,20,19,18,NULL),
+	("1rn21cs018",2,1,20,20,19,NULL),
+	("1rn21cs001",1,1,10,9,11,NULL),
+	("1rn21cs001",2,1,11,5,14,NULL),
+	("1rn20cs002",3,2,20,20,19,NULL),
+	("1rn20cs003",3,3,15,14,16,NULL),
+	("1rn20cs004",3,4,8,9,10,NULL);
