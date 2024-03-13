@@ -13,7 +13,7 @@ select S1.sem, S1.sec ,gender,count(*) count
 from student S,class C ,semsec S1
 where S.usn=C.usn and C.ssid=S1.ssid
 group by S.gender,C.ssid;
-;
+
 
 #better looking version of question 2
 select S1.sem, S1.sec ,
@@ -22,7 +22,7 @@ select S1.sem, S1.sec ,
 from student S,class C ,semsec S1
 where S.usn=C.usn and C.ssid=S1.ssid
 group by C.ssid;
-;
+
 
 
 
