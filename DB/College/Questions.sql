@@ -15,6 +15,15 @@ where S.usn=C.usn and C.ssid=S1.ssid
 group by S.gender,C.ssid;
 ;
 
+#better looking version of question 2
+select S1.sem, S1.sec ,
+	sum(case when S.gender='M' then 1 else 0 end) Male,
+	sum(case when S.gender='F' then 1 else 0 end) Female
+from student S,class C ,semsec S1
+where S.usn=C.usn and C.ssid=S1.ssid
+group by C.ssid;
+;
+
 
 
 # 3. Create a view of Test1 marks of student USN ‘1RN21CS001’ in all subjects.
