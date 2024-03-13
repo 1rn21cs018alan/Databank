@@ -41,7 +41,7 @@ select * from test1;
 
 update IAmarks 
 set finalIA=(test1+test2+test3-least(test1,test2,test3))/2
-where usn is not NULL;
+where usn!='a' and subcode!=-1 and ssid !=-1;
 
 
 
