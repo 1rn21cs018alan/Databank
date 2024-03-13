@@ -27,8 +27,8 @@ from Movie M,Rating R
 where M.Mid=R.Mid and R.star in(
 	select max(R1.star)
 	from Rating R1
-	where M.Mid=R1.Mid
-);
+	where M.Mid=R1.Mid)
+order by title;
 
 #4. List all actors who acted in a movie before 2000 
 #   and also in a movie after 2015 (use JOIN operation).
